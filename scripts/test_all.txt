@@ -1,0 +1,47 @@
+help
+info
+show
+add
+NewOne
+10.5
+12.5
+-1
+10.5
+WRONG
+SCOUT
+
+POWER_BLADE
+AlphaChapter
+100
+add_if_min
+Tiny
+1.0
+5
+1
+SCOUT
+MELTAGUN
+POWER_FIST
+MinChapter
+50
+update 1
+UpdatedName
+10.0
+42
+99.9
+LIBRARIAN
+COMBI_FLAMER
+CHAIN_AXE
+UpdatedChapter
+500
+remove_by_id 2
+count_less_than_weapon_type GRENADE_LAUNCHER
+filter_by_weapon_type MELTAGUN
+print_unique_category
+shuffle
+history
+save
+execute_script scripts/inner.txt
+execute_script scripts/recursive.txt
+clear
+show
+exit

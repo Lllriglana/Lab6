@@ -1,0 +1,52 @@
+help
+info
+show
+clear
+show
+add
+Titus
+-540
+10.5
+20.0
+0
+100.0
+WRONG_CATEGORY
+TERMINATOR
+MELTAGUN
+POWER_BLADE
+Ultramarines
+1001
+1000
+add_if_min
+Scout
+0.0
+5.0
+50.0
+
+COMBI_FLAMER
+
+Raven Guard
+500
+show
+update 1
+Captain Titus
+15.5
+25.0
+120.0
+CHAPLAIN
+GRENADE_LAUNCHER
+POWER_FIST
+Ultramarines
+999
+count_less_than_weapon_type GRENADE_LAUNCHER
+filter_by_weapon_type GRENADE_LAUNCHER
+print_unique_category
+shuffle
+show
+remove_by_id 2
+show
+history
+execute_script scripts/full_demo.txt
+save
+info
+exit

@@ -1,0 +1,70 @@
+[
+  {
+    "id": 4,
+    "name": "Tiny",
+    "coordinates": {
+      "x": 1.0,
+      "y": 5.0
+    },
+    "creationDate": "2026-05-24",
+    "health": 1.0,
+    "category": "SCOUT",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": "POWER_FIST",
+    "chapter": {
+      "name": "MinChapter",
+      "marinesCount": 200
+    }
+  },
+  {
+    "id": 3,
+    "name": "NewOne",
+    "coordinates": {
+      "x": 12.5,
+      "y": 30.0
+    },
+    "creationDate": "2026-05-24",
+    "health": 10.5,
+    "category": "SCOUT",
+    "weaponType": null,
+    "meleeWeapon": "POWER_BLADE",
+    "chapter": {
+      "name": "AlphaChapter",
+      "marinesCount": 100
+    }
+  },
+  {
+    "id": 1,
+    "name": "UpdatedName",
+    "coordinates": {
+      "x": 10.0,
+      "y": 42.0
+    },
+    "creationDate": "2026-05-24",
+    "health": 99.9,
+    "category": "LIBRARIAN",
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": "CHAIN_AXE",
+    "chapter": {
+      "name": "UpdatedChapter",
+      "marinesCount": 300
+    }
+  },
+  {
+    "id": 5,
+    "name": "Mist",
+    "coordinates": {
+      "x": 12.0,
+      "y": 13.0
+    },
+    "creationDate": "2026-09-11",
+    "health": 150.0,
+    "category": "INCEPTOR",
+    "weaponType": null,
+    "meleeWeapon": null,
+    "chapter": {
+      "name": "MaxChapter",
+      "marinesCount": 250
+    }
+  }
+]

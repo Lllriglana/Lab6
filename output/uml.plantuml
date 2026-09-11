@@ -1,0 +1,470 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide circle
+
+class Main {
+  -Main()
+  +{static} main(args: String[]): void
+  -{static} loadInitialCollection(collectionManager: CollectionManager, fileManager: FileManager, out: PrintStream): void
+  -{static} runLoop(inputManager: InputManager, commandManager: CommandManager, out: PrintStream): void
+  -{static} registerCommands(commandManager: CommandManager, collectionManager: CollectionManager, fileManager: FileManager, inputManager: InputManager, marineInputReader: SpaceMarineInputReader, out: PrintStream): void
+}
+
+abstract class AbstractCommand {
+  -name: String
+  -description: String
+  --
+  #AbstractCommand(name: String, description: String)
+  +getName(): String
+  +getDescription(): String
+  #requireNoArgument(argument: String): void
+  #requireArgument(argument: String): String
+  #parsePositiveInt(argument: String, fieldName: String): int
+  #parsePositiveLong(argument: String, fieldName: String): long
+}
+
+class AddCommand {
+  -collectionManager: CollectionManager
+  -inputReader: SpaceMarineInputReader
+  -out: PrintStream
+  --
+  +AddCommand(collectionManager: CollectionManager, inputReader: SpaceMarineInputReader, out: PrintStream)
+  +execute(argument: String): boolean
+}
+
+class AddIfMinCommand {
+  -collectionManager: CollectionManager
+  -inputReader: SpaceMarineInputReader
+  -out: PrintStream
+  --
+  +AddIfMinCommand(collectionManager: CollectionManager, inputReader: SpaceMarineInputReader, out: PrintStream)
+  +execute(argument: String): boolean
+}
+
+class ClearCommand {
+  -collectionManager: CollectionManager
+  -out: PrintStream
+  --
+  +ClearCommand(collectionManager: CollectionManager, out: PrintStream)
+  +execute(argument: String): boolean
+}
+
+interface Command {
+  ~getName(): String
+  ~getDescription(): String
+  ~execute(argument: String): boolean
+}
+
+class CountLessThanWeaponTypeCommand {
+  -collectionManager: CollectionManager
+  -out: PrintStream
+  --
+  +CountLessThanWeaponTypeCommand(collectionManager: CollectionManager, out: PrintStream)
+  +execute(argument: String): boolean
+}
+
+class ExecuteScriptCommand {
+  -inputManager: InputManager
+  -out: PrintStream
+  --
+  +ExecuteScriptCommand(inputManager: InputManager, out: PrintStream)
+  +execute(argument: String): boolean
+}
+
+class ExitCommand {
+  -out: PrintStream
+  --
+  +ExitCommand(out: PrintStream)
+  +execute(argument: String): boolean
+}
+
+class FilterByWeaponTypeCommand {
+  -collectionManager: CollectionManager
+  -out: PrintStream
+  --
+  +FilterByWeaponTypeCommand(collectionManager: CollectionManager, out: PrintStream)
+  +execute(argument: String): boolean
+}
+
+class HelpCommand {
+  -commandManager: CommandManager
+  -out: PrintStream
+  --
+  +HelpCommand(commandManager: CommandManager, out: PrintStream)
+  +execute(argument: String): boolean
+}
+
+class HistoryCommand {
+  -historyManager: HistoryManager
+  -out: PrintStream
+  --
+  +HistoryCommand(historyManager: HistoryManager, out: PrintStream)
+  +execute(argument: String): boolean
+}
+
+class InfoCommand {
+  -collectionManager: CollectionManager
+  -out: PrintStream
+  --
+  +InfoCommand(collectionManager: CollectionManager, out: PrintStream)
+  +execute(argument: String): boolean
+}
+
+class PrintUniqueCategoryCommand {
+  -collectionManager: CollectionManager
+  -out: PrintStream
+  --
+  +PrintUniqueCategoryCommand(collectionManager: CollectionManager, out: PrintStream)
+  +execute(argument: String): boolean
+}
+
+class RemoveByIdCommand {
+  -collectionManager: CollectionManager
+  -out: PrintStream
+  --
+  +RemoveByIdCommand(collectionManager: CollectionManager, out: PrintStream)
+  +execute(argument: String): boolean
+}
+
+class SaveCommand {
+  -collectionManager: CollectionManager
+  -fileManager: FileManager
+  -out: PrintStream
+  --
+  +SaveCommand(collectionManager: CollectionManager, fileManager: FileManager, out: PrintStream)
+  +execute(argument: String): boolean
+}
+
+class ShowCommand {
+  -collectionManager: CollectionManager
+  -out: PrintStream
+  --
+  +ShowCommand(collectionManager: CollectionManager, out: PrintStream)
+  +execute(argument: String): boolean
+}
+
+class ShuffleCommand {
+  -collectionManager: CollectionManager
+  -out: PrintStream
+  --
+  +ShuffleCommand(collectionManager: CollectionManager, out: PrintStream)
+  +execute(argument: String): boolean
+}
+
+class UpdateCommand {
+  -collectionManager: CollectionManager
+  -inputReader: SpaceMarineInputReader
+  -out: PrintStream
+  --
+  +UpdateCommand(collectionManager: CollectionManager, inputReader: SpaceMarineInputReader, out: PrintStream)
+  +execute(argument: String): boolean
+}
+
+class CommandException {
+  +CommandException(message: String)
+  +CommandException(message: String, cause: Throwable)
+}
+
+class FileOperationException {
+  +FileOperationException(message: String)
+  +FileOperationException(message: String, cause: Throwable)
+}
+
+class InputException {
+  +InputException(message: String)
+  +InputException(message: String, cause: Throwable)
+}
+
+class ValidationException {
+  +ValidationException(message: String)
+  +ValidationException(message: String, cause: Throwable)
+}
+
+class InputManager {
+  -consoleReader: BufferedReader
+  -out: PrintStream
+  -scriptStack: Deque<ScriptContext>
+  -activeScripts: Set<Path>
+  --
+  +InputManager(inputStream: InputStream, out: PrintStream)
+  +isInteractiveMode(): boolean
+  +readCommandLine(): String
+  +readFieldLine(prompt: String): String
+  +pushScript(rawPath: String): void
+  +close(): void
+  -readLine(reader: BufferedReader, errorMessage: String): String
+  -closeCurrentScript(): void
+}
+
+class ScriptContext {
+  -path: Path
+  -reader: BufferedReader
+  --
+  -ScriptContext(path: Path, reader: BufferedReader)
+}
+
+class SpaceMarineInputReader {
+  -inputManager: InputManager
+  -out: PrintStream
+  --
+  +SpaceMarineInputReader(inputManager: InputManager, out: PrintStream)
+  +readSpaceMarine(id: Long, creationDate: LocalDate): SpaceMarine
+  -readRequiredString(prompt: String, fieldName: String): String
+  -readNullableString(prompt: String): String
+  -readFloatWithMax(prompt: String, max: float, fieldName: String): float
+  -readIntegerRequired(prompt: String, fieldName: String): Integer
+  -readPositiveDouble(prompt: String, fieldName: String): double
+  -readEnum(prompt: String, enumClass: Class<E>, nullable: boolean): E
+  -normalizeRequiredNumeric(raw: String, fieldName: String): String
+  -readUntilValid(prompt: String, parser: ValueParser<T>): T
+}
+
+interface ValueParser {
+  ~parse(raw: String): T
+}
+
+class CollectionManager {
+  -marines: LinkedList<SpaceMarine>
+  -initializationDate: ZonedDateTime
+  -nextId: long
+  --
+  +CollectionManager()
+  +replaceAll(loadedMarines: List<SpaceMarine>): void
+  +generateNextId(): Long
+  +add(marine: SpaceMarine): void
+  +addIfMin(marine: SpaceMarine): boolean
+  +updateById(id: long, updatedMarine: SpaceMarine): boolean
+  +findById(id: long): SpaceMarine
+  +removeById(id: long): boolean
+  +clear(): void
+  +shuffle(): void
+  +countLessThanWeaponType(weaponType: Weapon): long
+  +filterByWeaponType(weaponType: Weapon): List<SpaceMarine>
+  +getUniqueCategories(): Set<AstartesCategory>
+  +getAll(): List<SpaceMarine>
+  +size(): int
+  +getCollectionType(): String
+  +getInitializationDate(): ZonedDateTime
+  -recalculateNextId(): void
+  -containsId(id: long): boolean
+  -ensureUniqueIds(marinesToCheck: List<SpaceMarine>): void
+}
+
+class CommandManager {
+  -commands: Map<String, Command>
+  -historyManager: HistoryManager
+  -out: PrintStream
+  --
+  +CommandManager(historyManager: HistoryManager, out: PrintStream)
+  +register(command: Command): void
+  +getCommands(): Collection<Command>
+  +getHistoryManager(): HistoryManager
+  +executeLine(line: String): boolean
+}
+
+class FileManager {
+  -filePath: Path
+  -out: PrintStream
+  --
+  +FileManager(filePath: Path, out: PrintStream)
+  +getFilePath(): Path
+  +load(): List<SpaceMarine>
+  +save(marines: List<SpaceMarine>): void
+  -readFileContent(): String
+  -parseSpaceMarine(rawObject: Object): SpaceMarine
+  -parseCoordinates(rawObject: Object): Coordinates
+  -parseChapter(rawObject: Object): Chapter
+  -parseEnum(rawValue: Object, enumClass: Class<E>, fieldName: String, nullable: boolean): E
+  -readRequiredInteger(rawValue: Object, fieldName: String): Integer
+  -readRequiredLong(rawValue: Object, fieldName: String): Long
+  -readRequiredFloat(rawValue: Object, fieldName: String): float
+  -readRequiredDouble(rawValue: Object, fieldName: String): double
+  -readRequiredNumber(rawValue: Object, fieldName: String): Number
+  -readRequiredString(rawValue: Object, fieldName: String): String
+  -readOptionalString(rawValue: Object, fieldName: String): String
+  -asObjectMap(rawObject: Object, fieldName: String): Map<String,Object>
+  -spaceMarineToMap(marine: SpaceMarine): Map<String,Object>
+  -coordinatesToMap(coordinates: Coordinates): Map<String,Object>
+  -chapterToMap(chapter: Chapter): Map<String,Object>
+}
+
+class HistoryManager {
+  -commandHistory: Deque<String>
+  -capacity: int
+  --
+  +HistoryManager(capacity: int)
+  +add(commandName: String): void
+  +getHistory(): List<String>
+}
+
+class Chapter {
+  -name: String
+  -world: String
+  --
+  +Chapter(name: String, world: String)
+  +getName(): String
+  +getWorld(): String
+  +toString(): String
+  +equals(o: Object): boolean
+  +hashCode(): int
+}
+
+class Coordinates {
+  -x: float
+  -y: Integer
+  --
+  +Coordinates(x: float, y: Integer)
+  +getX(): float
+  +getY(): Integer
+  +toString(): String
+  +equals(o: Object): boolean
+  +hashCode(): int
+}
+
+class SpaceMarine {
+  -id: Long
+  -name: String
+  -coordinates: Coordinates
+  -creationDate: LocalDate
+  -health: double
+  -category: AstartesCategory
+  -weaponType: Weapon
+  -meleeWeapon: MeleeWeapon
+  -chapter: Chapter
+  --
+  +SpaceMarine(id: Long, name: String, coordinates: Coordinates, creationDate: LocalDate, health: double, category: AstartesCategory, weaponType: Weapon, meleeWeapon: MeleeWeapon, chapter: Chapter)
+  +getId(): Long
+  +getName(): String
+  +getCoordinates(): Coordinates
+  +getCreationDate(): LocalDate
+  +getHealth(): double
+  +getCategory(): AstartesCategory
+  +getWeaponType(): Weapon
+  +getMeleeWeapon(): MeleeWeapon
+  +getChapter(): Chapter
+  +compareTo(other: SpaceMarine): int
+  +toString(): String
+  +equals(o: Object): boolean
+  +hashCode(): int
+}
+
+class CommandLineParser {
+  -CommandLineParser()
+  +{static} parse(line: String): ParsedCommand
+}
+
+class ParsedCommand {
+  -name: String
+  -argument: String
+  --
+  +ParsedCommand(name: String, argument: String)
+  +getName(): String
+  +getArgument(): String
+}
+
+class EnumUtils {
+  -EnumUtils()
+  +{static} parseEnum(enumClass: Class<E>, raw: String, nullable: boolean): E
+  +{static} allowedValues(enumClass: Class<E>): String
+}
+
+class SimpleJson {
+  -{static} INDENT: String = "  "
+  --
+  -SimpleJson()
+  +{static} parse(json: String): Object
+  +{static} stringify(value: Object): String
+  -{static} writeValue(builder: StringBuilder, value: Object, level: int): void
+  -{static} writeObject(builder: StringBuilder, map: Map<?,?>, level: int): void
+  -{static} writeArray(builder: StringBuilder, list: List<?>, level: int): void
+  -{static} writeString(builder: StringBuilder, text: String): void
+  -{static} appendIndent(builder: StringBuilder, level: int): void
+}
+
+class Parser {
+  -text: String
+  -index: int
+  --
+  -Parser(text: String)
+  -error(message: String): ValidationException
+  -isEnd(): boolean
+  -skipWhitespace(): void
+  -parseValue(): Object
+  -parseObject(): Map<String,Object>
+  -parseArray(): List<Object>
+  -parseString(): String
+  -parseUnicodeEscape(): char
+  -parseNumber(): Number
+  -consumeLiteral(literal: String): void
+  -tryConsume(expected: char): boolean
+  -consume(expected: char): void
+}
+
+class Validators {
+  -Validators()
+  +{static} requireValidId(id: Long): Long
+  +{static} requireNotBlank(value: String, fieldName: String): String
+  +{static} requireNotNull(value: T, fieldName: String): T
+  +{static} requireGreaterThanZero(value: int, fieldName: String): int
+  +{static} requireGreaterThanZero(value: double, fieldName: String): double
+  +{static} requireLessOrEqual(value: long, max: long, fieldName: String): long
+  +{static} requireLessOrEqual(value: float, max: float, fieldName: String): float
+}
+
+Main ..> CollectionManager
+Main ..> FileManager
+Main ..> InputManager
+Main ..> CommandManager
+Main ..> SpaceMarineInputReader
+AbstractCommand ..|> Command
+AddCommand --|> AbstractCommand
+AddCommand *-- CollectionManager
+AddCommand *-- SpaceMarineInputReader
+AddIfMinCommand --|> AbstractCommand
+AddIfMinCommand *-- CollectionManager
+AddIfMinCommand *-- SpaceMarineInputReader
+ClearCommand --|> AbstractCommand
+ClearCommand *-- CollectionManager
+CountLessThanWeaponTypeCommand --|> AbstractCommand
+CountLessThanWeaponTypeCommand *-- CollectionManager
+ExecuteScriptCommand --|> AbstractCommand
+ExecuteScriptCommand *-- InputManager
+ExitCommand --|> AbstractCommand
+FilterByWeaponTypeCommand --|> AbstractCommand
+FilterByWeaponTypeCommand *-- CollectionManager
+HelpCommand --|> AbstractCommand
+HelpCommand *-- CommandManager
+HistoryCommand --|> AbstractCommand
+HistoryCommand *-- HistoryManager
+InfoCommand --|> AbstractCommand
+InfoCommand *-- CollectionManager
+PrintUniqueCategoryCommand --|> AbstractCommand
+PrintUniqueCategoryCommand *-- CollectionManager
+RemoveByIdCommand --|> AbstractCommand
+RemoveByIdCommand *-- CollectionManager
+SaveCommand --|> AbstractCommand
+SaveCommand *-- CollectionManager
+SaveCommand *-- FileManager
+ShowCommand --|> AbstractCommand
+ShowCommand *-- CollectionManager
+ShuffleCommand --|> AbstractCommand
+ShuffleCommand *-- CollectionManager
+UpdateCommand --|> AbstractCommand
+UpdateCommand *-- CollectionManager
+UpdateCommand *-- SpaceMarineInputReader
+InputManager o-- ScriptContext
+SpaceMarineInputReader *-- InputManager
+SpaceMarineInputReader ..> SpaceMarine
+SpaceMarineInputReader ..> ValueParser
+CollectionManager o-- SpaceMarine
+CommandManager o-- Command
+CommandManager *-- HistoryManager
+FileManager ..> SpaceMarine
+FileManager ..> Coordinates
+FileManager ..> Chapter
+SpaceMarine *-- Coordinates
+SpaceMarine *-- Chapter
+SpaceMarine ..> SpaceMarine
+CommandLineParser ..> ParsedCommand
+Parser ..> ValidationException
+@enduml

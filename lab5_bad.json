@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "name": "Bad",
+    "coordinates": {"x": -540.0, "y": 1.0},
+    "creationDate": "not-a-date",
+    "health": -5.0,
+    "category": "SCOUT",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": "POWER_FIST",
+    "chapter": {"name": "Bad", "marinesCount": 0}
+  },
+  {
+    "id": 2,
+    "name": "Good",
+    "coordinates": {"x": 10.0, "y": 2.0},
+    "creationDate": "2026-05-24",
+    "health": 5.0,
+    "category": "CHAPLAIN",
+    "weaponType": null,
+    "meleeWeapon": null,
+    "chapter": {"name": "Ok", "marinesCount": 1000}
+  }
+]
