@@ -1,0 +1,5 @@
+# Lab6 runtime/build artifacts (legacy tracked Lab5 files remain untouched).
+logs/
+lab6_data.json
+__pycache__/
+*.download

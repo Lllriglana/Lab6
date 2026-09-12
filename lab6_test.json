@@ -1,0 +1,2042 @@
+[
+  {
+    "id": 1,
+    "name": "Marine-001",
+    "coordinates": {
+      "x": -200.5,
+      "y": 0
+    },
+    "creationDate": "2026-09-12",
+    "health": 900,
+    "category": null,
+    "weaponType": null,
+    "meleeWeapon": null,
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 1
+    }
+  },
+  {
+    "id": 2,
+    "name": "Marine-002",
+    "coordinates": {
+      "x": -199.5,
+      "y": 1.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 892.5,
+    "category": "SCOUT",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": "CHAIN_AXE",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 8
+    }
+  },
+  {
+    "id": 3,
+    "name": "Marine-003",
+    "coordinates": {
+      "x": -198.5,
+      "y": 2.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 885,
+    "category": "INCEPTOR",
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": "LIGHTING_CLAW",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 15
+    }
+  },
+  {
+    "id": 4,
+    "name": "Marine-004",
+    "coordinates": {
+      "x": -197.5,
+      "y": 3.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 877.5,
+    "category": "TERMINATOR",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": "POWER_BLADE",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 22
+    }
+  },
+  {
+    "id": 5,
+    "name": "Marine-005",
+    "coordinates": {
+      "x": -196.5,
+      "y": 5
+    },
+    "creationDate": "2026-09-12",
+    "health": 870,
+    "category": "LIBRARIAN",
+    "weaponType": null,
+    "meleeWeapon": "POWER_FIST",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 29
+    }
+  },
+  {
+    "id": 6,
+    "name": "Marine-006",
+    "coordinates": {
+      "x": -195.5,
+      "y": 6.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 862.5,
+    "category": "CHAPLAIN",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": null,
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 36
+    }
+  },
+  {
+    "id": 7,
+    "name": "Marine-007",
+    "coordinates": {
+      "x": -194.5,
+      "y": 7.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 855,
+    "category": null,
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": "CHAIN_AXE",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 43
+    }
+  },
+  {
+    "id": 8,
+    "name": "Marine-008",
+    "coordinates": {
+      "x": -193.5,
+      "y": 8.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 847.5,
+    "category": "SCOUT",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": "LIGHTING_CLAW",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 50
+    }
+  },
+  {
+    "id": 9,
+    "name": "Marine-009",
+    "coordinates": {
+      "x": -192.5,
+      "y": 10
+    },
+    "creationDate": "2026-09-12",
+    "health": 840,
+    "category": "INCEPTOR",
+    "weaponType": null,
+    "meleeWeapon": "POWER_BLADE",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 57
+    }
+  },
+  {
+    "id": 10,
+    "name": "Marine-010",
+    "coordinates": {
+      "x": -191.5,
+      "y": 11.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 832.5,
+    "category": "TERMINATOR",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": "POWER_FIST",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 64
+    }
+  },
+  {
+    "id": 11,
+    "name": "Marine-011",
+    "coordinates": {
+      "x": -190.5,
+      "y": 12.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 825,
+    "category": "LIBRARIAN",
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": null,
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 71
+    }
+  },
+  {
+    "id": 12,
+    "name": "Marine-012",
+    "coordinates": {
+      "x": -189.5,
+      "y": 13.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 817.5,
+    "category": "CHAPLAIN",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": "CHAIN_AXE",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 78
+    }
+  },
+  {
+    "id": 13,
+    "name": "Marine-013",
+    "coordinates": {
+      "x": -188.5,
+      "y": 15
+    },
+    "creationDate": "2026-09-12",
+    "health": 810,
+    "category": null,
+    "weaponType": null,
+    "meleeWeapon": "LIGHTING_CLAW",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 85
+    }
+  },
+  {
+    "id": 14,
+    "name": "Marine-014",
+    "coordinates": {
+      "x": -187.5,
+      "y": 16.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 802.5,
+    "category": "SCOUT",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": "POWER_BLADE",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 92
+    }
+  },
+  {
+    "id": 15,
+    "name": "Marine-015",
+    "coordinates": {
+      "x": -186.5,
+      "y": 17.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 795,
+    "category": "INCEPTOR",
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": "POWER_FIST",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 99
+    }
+  },
+  {
+    "id": 16,
+    "name": "Marine-016",
+    "coordinates": {
+      "x": -185.5,
+      "y": 18.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 787.5,
+    "category": "TERMINATOR",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": null,
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 106
+    }
+  },
+  {
+    "id": 17,
+    "name": "Marine-017",
+    "coordinates": {
+      "x": -184.5,
+      "y": 20
+    },
+    "creationDate": "2026-09-12",
+    "health": 780,
+    "category": "LIBRARIAN",
+    "weaponType": null,
+    "meleeWeapon": "CHAIN_AXE",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 113
+    }
+  },
+  {
+    "id": 18,
+    "name": "Marine-018",
+    "coordinates": {
+      "x": -183.5,
+      "y": 21.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 772.5,
+    "category": "CHAPLAIN",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": "LIGHTING_CLAW",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 120
+    }
+  },
+  {
+    "id": 19,
+    "name": "Marine-019",
+    "coordinates": {
+      "x": -182.5,
+      "y": 22.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 765,
+    "category": null,
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": "POWER_BLADE",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 127
+    }
+  },
+  {
+    "id": 20,
+    "name": "Marine-020",
+    "coordinates": {
+      "x": -181.5,
+      "y": 23.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 757.5,
+    "category": "SCOUT",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": "POWER_FIST",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 134
+    }
+  },
+  {
+    "id": 21,
+    "name": "Marine-021",
+    "coordinates": {
+      "x": -180.5,
+      "y": 25
+    },
+    "creationDate": "2026-09-12",
+    "health": 750,
+    "category": "INCEPTOR",
+    "weaponType": null,
+    "meleeWeapon": null,
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 141
+    }
+  },
+  {
+    "id": 22,
+    "name": "Marine-022",
+    "coordinates": {
+      "x": -179.5,
+      "y": 26.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 742.5,
+    "category": "TERMINATOR",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": "CHAIN_AXE",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 148
+    }
+  },
+  {
+    "id": 23,
+    "name": "Marine-023",
+    "coordinates": {
+      "x": -178.5,
+      "y": 27.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 735,
+    "category": "LIBRARIAN",
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": "LIGHTING_CLAW",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 155
+    }
+  },
+  {
+    "id": 24,
+    "name": "Marine-024",
+    "coordinates": {
+      "x": -177.5,
+      "y": 28.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 727.5,
+    "category": "CHAPLAIN",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": "POWER_BLADE",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 162
+    }
+  },
+  {
+    "id": 25,
+    "name": "Marine-025",
+    "coordinates": {
+      "x": -176.5,
+      "y": 30
+    },
+    "creationDate": "2026-09-12",
+    "health": 720,
+    "category": null,
+    "weaponType": null,
+    "meleeWeapon": "POWER_FIST",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 169
+    }
+  },
+  {
+    "id": 26,
+    "name": "Marine-026",
+    "coordinates": {
+      "x": -175.5,
+      "y": 31.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 712.5,
+    "category": "SCOUT",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": null,
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 176
+    }
+  },
+  {
+    "id": 27,
+    "name": "Marine-027",
+    "coordinates": {
+      "x": -174.5,
+      "y": 32.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 705,
+    "category": "INCEPTOR",
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": "CHAIN_AXE",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 183
+    }
+  },
+  {
+    "id": 28,
+    "name": "Marine-028",
+    "coordinates": {
+      "x": -173.5,
+      "y": 33.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 697.5,
+    "category": "TERMINATOR",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": "LIGHTING_CLAW",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 190
+    }
+  },
+  {
+    "id": 29,
+    "name": "Marine-029",
+    "coordinates": {
+      "x": -172.5,
+      "y": 35
+    },
+    "creationDate": "2026-09-12",
+    "health": 690,
+    "category": "LIBRARIAN",
+    "weaponType": null,
+    "meleeWeapon": "POWER_BLADE",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 197
+    }
+  },
+  {
+    "id": 30,
+    "name": "Marine-030",
+    "coordinates": {
+      "x": -171.5,
+      "y": 36.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 682.5,
+    "category": "CHAPLAIN",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": "POWER_FIST",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 204
+    }
+  },
+  {
+    "id": 31,
+    "name": "Marine-031",
+    "coordinates": {
+      "x": -170.5,
+      "y": 37.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 675,
+    "category": null,
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": null,
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 211
+    }
+  },
+  {
+    "id": 32,
+    "name": "Marine-032",
+    "coordinates": {
+      "x": -169.5,
+      "y": 38.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 667.5,
+    "category": "SCOUT",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": "CHAIN_AXE",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 218
+    }
+  },
+  {
+    "id": 33,
+    "name": "Marine-033",
+    "coordinates": {
+      "x": -168.5,
+      "y": 40
+    },
+    "creationDate": "2026-09-12",
+    "health": 660,
+    "category": "INCEPTOR",
+    "weaponType": null,
+    "meleeWeapon": "LIGHTING_CLAW",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 225
+    }
+  },
+  {
+    "id": 34,
+    "name": "Marine-034",
+    "coordinates": {
+      "x": -167.5,
+      "y": 41.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 652.5,
+    "category": "TERMINATOR",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": "POWER_BLADE",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 232
+    }
+  },
+  {
+    "id": 35,
+    "name": "Marine-035",
+    "coordinates": {
+      "x": -166.5,
+      "y": 42.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 645,
+    "category": "LIBRARIAN",
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": "POWER_FIST",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 239
+    }
+  },
+  {
+    "id": 36,
+    "name": "Marine-036",
+    "coordinates": {
+      "x": -165.5,
+      "y": 43.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 637.5,
+    "category": "CHAPLAIN",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": null,
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 246
+    }
+  },
+  {
+    "id": 37,
+    "name": "Marine-037",
+    "coordinates": {
+      "x": -164.5,
+      "y": 45
+    },
+    "creationDate": "2026-09-12",
+    "health": 630,
+    "category": null,
+    "weaponType": null,
+    "meleeWeapon": "CHAIN_AXE",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 253
+    }
+  },
+  {
+    "id": 38,
+    "name": "Marine-038",
+    "coordinates": {
+      "x": -163.5,
+      "y": 46.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 622.5,
+    "category": "SCOUT",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": "LIGHTING_CLAW",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 260
+    }
+  },
+  {
+    "id": 39,
+    "name": "Marine-039",
+    "coordinates": {
+      "x": -162.5,
+      "y": 47.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 615,
+    "category": "INCEPTOR",
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": "POWER_BLADE",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 267
+    }
+  },
+  {
+    "id": 40,
+    "name": "Marine-040",
+    "coordinates": {
+      "x": -161.5,
+      "y": 48.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 607.5,
+    "category": "TERMINATOR",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": "POWER_FIST",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 274
+    }
+  },
+  {
+    "id": 41,
+    "name": "Marine-041",
+    "coordinates": {
+      "x": -160.5,
+      "y": 50
+    },
+    "creationDate": "2026-09-12",
+    "health": 600,
+    "category": "LIBRARIAN",
+    "weaponType": null,
+    "meleeWeapon": null,
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 281
+    }
+  },
+  {
+    "id": 42,
+    "name": "Marine-042",
+    "coordinates": {
+      "x": -159.5,
+      "y": 51.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 592.5,
+    "category": "CHAPLAIN",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": "CHAIN_AXE",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 288
+    }
+  },
+  {
+    "id": 43,
+    "name": "Marine-043",
+    "coordinates": {
+      "x": -158.5,
+      "y": 52.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 585,
+    "category": null,
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": "LIGHTING_CLAW",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 295
+    }
+  },
+  {
+    "id": 44,
+    "name": "Marine-044",
+    "coordinates": {
+      "x": -157.5,
+      "y": 53.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 577.5,
+    "category": "SCOUT",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": "POWER_BLADE",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 302
+    }
+  },
+  {
+    "id": 45,
+    "name": "Marine-045",
+    "coordinates": {
+      "x": -156.5,
+      "y": 55
+    },
+    "creationDate": "2026-09-12",
+    "health": 570,
+    "category": "INCEPTOR",
+    "weaponType": null,
+    "meleeWeapon": "POWER_FIST",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 309
+    }
+  },
+  {
+    "id": 46,
+    "name": "Marine-046",
+    "coordinates": {
+      "x": -155.5,
+      "y": 56.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 562.5,
+    "category": "TERMINATOR",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": null,
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 316
+    }
+  },
+  {
+    "id": 47,
+    "name": "Marine-047",
+    "coordinates": {
+      "x": -154.5,
+      "y": 57.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 555,
+    "category": "LIBRARIAN",
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": "CHAIN_AXE",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 323
+    }
+  },
+  {
+    "id": 48,
+    "name": "Marine-048",
+    "coordinates": {
+      "x": -153.5,
+      "y": 58.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 547.5,
+    "category": "CHAPLAIN",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": "LIGHTING_CLAW",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 330
+    }
+  },
+  {
+    "id": 49,
+    "name": "Marine-049",
+    "coordinates": {
+      "x": -152.5,
+      "y": 60
+    },
+    "creationDate": "2026-09-12",
+    "health": 540,
+    "category": null,
+    "weaponType": null,
+    "meleeWeapon": "POWER_BLADE",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 337
+    }
+  },
+  {
+    "id": 50,
+    "name": "Marine-050",
+    "coordinates": {
+      "x": -151.5,
+      "y": 61.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 532.5,
+    "category": "SCOUT",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": "POWER_FIST",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 344
+    }
+  },
+  {
+    "id": 51,
+    "name": "Marine-051",
+    "coordinates": {
+      "x": -150.5,
+      "y": 62.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 525,
+    "category": "INCEPTOR",
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": null,
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 351
+    }
+  },
+  {
+    "id": 52,
+    "name": "Marine-052",
+    "coordinates": {
+      "x": -149.5,
+      "y": 63.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 517.5,
+    "category": "TERMINATOR",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": "CHAIN_AXE",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 358
+    }
+  },
+  {
+    "id": 53,
+    "name": "Marine-053",
+    "coordinates": {
+      "x": -148.5,
+      "y": 65
+    },
+    "creationDate": "2026-09-12",
+    "health": 510,
+    "category": "LIBRARIAN",
+    "weaponType": null,
+    "meleeWeapon": "LIGHTING_CLAW",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 365
+    }
+  },
+  {
+    "id": 54,
+    "name": "Marine-054",
+    "coordinates": {
+      "x": -147.5,
+      "y": 66.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 502.5,
+    "category": "CHAPLAIN",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": "POWER_BLADE",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 372
+    }
+  },
+  {
+    "id": 55,
+    "name": "Marine-055",
+    "coordinates": {
+      "x": -146.5,
+      "y": 67.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 495,
+    "category": null,
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": "POWER_FIST",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 379
+    }
+  },
+  {
+    "id": 56,
+    "name": "Marine-056",
+    "coordinates": {
+      "x": -145.5,
+      "y": 68.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 487.5,
+    "category": "SCOUT",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": null,
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 386
+    }
+  },
+  {
+    "id": 57,
+    "name": "Marine-057",
+    "coordinates": {
+      "x": -144.5,
+      "y": 70
+    },
+    "creationDate": "2026-09-12",
+    "health": 480,
+    "category": "INCEPTOR",
+    "weaponType": null,
+    "meleeWeapon": "CHAIN_AXE",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 393
+    }
+  },
+  {
+    "id": 58,
+    "name": "Marine-058",
+    "coordinates": {
+      "x": -143.5,
+      "y": 71.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 472.5,
+    "category": "TERMINATOR",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": "LIGHTING_CLAW",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 400
+    }
+  },
+  {
+    "id": 59,
+    "name": "Marine-059",
+    "coordinates": {
+      "x": -142.5,
+      "y": 72.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 465,
+    "category": "LIBRARIAN",
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": "POWER_BLADE",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 407
+    }
+  },
+  {
+    "id": 60,
+    "name": "Marine-060",
+    "coordinates": {
+      "x": -141.5,
+      "y": 73.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 457.5,
+    "category": "CHAPLAIN",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": "POWER_FIST",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 414
+    }
+  },
+  {
+    "id": 61,
+    "name": "Marine-061",
+    "coordinates": {
+      "x": -140.5,
+      "y": 75
+    },
+    "creationDate": "2026-09-12",
+    "health": 450,
+    "category": null,
+    "weaponType": null,
+    "meleeWeapon": null,
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 421
+    }
+  },
+  {
+    "id": 62,
+    "name": "Marine-062",
+    "coordinates": {
+      "x": -139.5,
+      "y": 76.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 442.5,
+    "category": "SCOUT",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": "CHAIN_AXE",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 428
+    }
+  },
+  {
+    "id": 63,
+    "name": "Marine-063",
+    "coordinates": {
+      "x": -138.5,
+      "y": 77.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 435,
+    "category": "INCEPTOR",
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": "LIGHTING_CLAW",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 435
+    }
+  },
+  {
+    "id": 64,
+    "name": "Marine-064",
+    "coordinates": {
+      "x": -137.5,
+      "y": 78.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 427.5,
+    "category": "TERMINATOR",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": "POWER_BLADE",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 442
+    }
+  },
+  {
+    "id": 65,
+    "name": "Marine-065",
+    "coordinates": {
+      "x": -136.5,
+      "y": 80
+    },
+    "creationDate": "2026-09-12",
+    "health": 420,
+    "category": "LIBRARIAN",
+    "weaponType": null,
+    "meleeWeapon": "POWER_FIST",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 449
+    }
+  },
+  {
+    "id": 66,
+    "name": "Marine-066",
+    "coordinates": {
+      "x": -135.5,
+      "y": 81.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 412.5,
+    "category": "CHAPLAIN",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": null,
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 456
+    }
+  },
+  {
+    "id": 67,
+    "name": "Marine-067",
+    "coordinates": {
+      "x": -134.5,
+      "y": 82.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 405,
+    "category": null,
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": "CHAIN_AXE",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 463
+    }
+  },
+  {
+    "id": 68,
+    "name": "Marine-068",
+    "coordinates": {
+      "x": -133.5,
+      "y": 83.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 397.5,
+    "category": "SCOUT",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": "LIGHTING_CLAW",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 470
+    }
+  },
+  {
+    "id": 69,
+    "name": "Marine-069",
+    "coordinates": {
+      "x": -132.5,
+      "y": 85
+    },
+    "creationDate": "2026-09-12",
+    "health": 390,
+    "category": "INCEPTOR",
+    "weaponType": null,
+    "meleeWeapon": "POWER_BLADE",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 477
+    }
+  },
+  {
+    "id": 70,
+    "name": "Marine-070",
+    "coordinates": {
+      "x": -131.5,
+      "y": 86.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 382.5,
+    "category": "TERMINATOR",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": "POWER_FIST",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 484
+    }
+  },
+  {
+    "id": 71,
+    "name": "Marine-071",
+    "coordinates": {
+      "x": -130.5,
+      "y": 87.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 375,
+    "category": "LIBRARIAN",
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": null,
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 491
+    }
+  },
+  {
+    "id": 72,
+    "name": "Marine-072",
+    "coordinates": {
+      "x": -129.5,
+      "y": 88.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 367.5,
+    "category": "CHAPLAIN",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": "CHAIN_AXE",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 498
+    }
+  },
+  {
+    "id": 73,
+    "name": "Marine-073",
+    "coordinates": {
+      "x": -128.5,
+      "y": 90
+    },
+    "creationDate": "2026-09-12",
+    "health": 360,
+    "category": null,
+    "weaponType": null,
+    "meleeWeapon": "LIGHTING_CLAW",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 505
+    }
+  },
+  {
+    "id": 74,
+    "name": "Marine-074",
+    "coordinates": {
+      "x": -127.5,
+      "y": 91.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 352.5,
+    "category": "SCOUT",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": "POWER_BLADE",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 512
+    }
+  },
+  {
+    "id": 75,
+    "name": "Marine-075",
+    "coordinates": {
+      "x": -126.5,
+      "y": 92.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 345,
+    "category": "INCEPTOR",
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": "POWER_FIST",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 519
+    }
+  },
+  {
+    "id": 76,
+    "name": "Marine-076",
+    "coordinates": {
+      "x": -125.5,
+      "y": 93.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 337.5,
+    "category": "TERMINATOR",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": null,
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 526
+    }
+  },
+  {
+    "id": 77,
+    "name": "Marine-077",
+    "coordinates": {
+      "x": -124.5,
+      "y": 95
+    },
+    "creationDate": "2026-09-12",
+    "health": 330,
+    "category": "LIBRARIAN",
+    "weaponType": null,
+    "meleeWeapon": "CHAIN_AXE",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 533
+    }
+  },
+  {
+    "id": 78,
+    "name": "Marine-078",
+    "coordinates": {
+      "x": -123.5,
+      "y": 96.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 322.5,
+    "category": "CHAPLAIN",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": "LIGHTING_CLAW",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 540
+    }
+  },
+  {
+    "id": 79,
+    "name": "Marine-079",
+    "coordinates": {
+      "x": -122.5,
+      "y": 97.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 315,
+    "category": null,
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": "POWER_BLADE",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 547
+    }
+  },
+  {
+    "id": 80,
+    "name": "Marine-080",
+    "coordinates": {
+      "x": -121.5,
+      "y": 98.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 307.5,
+    "category": "SCOUT",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": "POWER_FIST",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 554
+    }
+  },
+  {
+    "id": 81,
+    "name": "Marine-081",
+    "coordinates": {
+      "x": -120.5,
+      "y": 100
+    },
+    "creationDate": "2026-09-12",
+    "health": 300,
+    "category": "INCEPTOR",
+    "weaponType": null,
+    "meleeWeapon": null,
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 561
+    }
+  },
+  {
+    "id": 82,
+    "name": "Marine-082",
+    "coordinates": {
+      "x": -119.5,
+      "y": 101.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 292.5,
+    "category": "TERMINATOR",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": "CHAIN_AXE",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 568
+    }
+  },
+  {
+    "id": 83,
+    "name": "Marine-083",
+    "coordinates": {
+      "x": -118.5,
+      "y": 102.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 285,
+    "category": "LIBRARIAN",
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": "LIGHTING_CLAW",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 575
+    }
+  },
+  {
+    "id": 84,
+    "name": "Marine-084",
+    "coordinates": {
+      "x": -117.5,
+      "y": 103.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 277.5,
+    "category": "CHAPLAIN",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": "POWER_BLADE",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 582
+    }
+  },
+  {
+    "id": 85,
+    "name": "Marine-085",
+    "coordinates": {
+      "x": -116.5,
+      "y": 105
+    },
+    "creationDate": "2026-09-12",
+    "health": 270,
+    "category": null,
+    "weaponType": null,
+    "meleeWeapon": "POWER_FIST",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 589
+    }
+  },
+  {
+    "id": 86,
+    "name": "Marine-086",
+    "coordinates": {
+      "x": -115.5,
+      "y": 106.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 262.5,
+    "category": "SCOUT",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": null,
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 596
+    }
+  },
+  {
+    "id": 87,
+    "name": "Marine-087",
+    "coordinates": {
+      "x": -114.5,
+      "y": 107.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 255,
+    "category": "INCEPTOR",
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": "CHAIN_AXE",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 603
+    }
+  },
+  {
+    "id": 88,
+    "name": "Marine-088",
+    "coordinates": {
+      "x": -113.5,
+      "y": 108.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 247.5,
+    "category": "TERMINATOR",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": "LIGHTING_CLAW",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 610
+    }
+  },
+  {
+    "id": 89,
+    "name": "Marine-089",
+    "coordinates": {
+      "x": -112.5,
+      "y": 110
+    },
+    "creationDate": "2026-09-12",
+    "health": 240,
+    "category": "LIBRARIAN",
+    "weaponType": null,
+    "meleeWeapon": "POWER_BLADE",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 617
+    }
+  },
+  {
+    "id": 90,
+    "name": "Marine-090",
+    "coordinates": {
+      "x": -111.5,
+      "y": 111.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 232.5,
+    "category": "CHAPLAIN",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": "POWER_FIST",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 624
+    }
+  },
+  {
+    "id": 91,
+    "name": "Marine-091",
+    "coordinates": {
+      "x": -110.5,
+      "y": 112.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 225,
+    "category": null,
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": null,
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 631
+    }
+  },
+  {
+    "id": 92,
+    "name": "Marine-092",
+    "coordinates": {
+      "x": -109.5,
+      "y": 113.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 217.5,
+    "category": "SCOUT",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": "CHAIN_AXE",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 638
+    }
+  },
+  {
+    "id": 93,
+    "name": "Marine-093",
+    "coordinates": {
+      "x": -108.5,
+      "y": 115
+    },
+    "creationDate": "2026-09-12",
+    "health": 210,
+    "category": "INCEPTOR",
+    "weaponType": null,
+    "meleeWeapon": "LIGHTING_CLAW",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 645
+    }
+  },
+  {
+    "id": 94,
+    "name": "Marine-094",
+    "coordinates": {
+      "x": -107.5,
+      "y": 116.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 202.5,
+    "category": "TERMINATOR",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": "POWER_BLADE",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 652
+    }
+  },
+  {
+    "id": 95,
+    "name": "Marine-095",
+    "coordinates": {
+      "x": -106.5,
+      "y": 117.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 195,
+    "category": "LIBRARIAN",
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": "POWER_FIST",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 659
+    }
+  },
+  {
+    "id": 96,
+    "name": "Marine-096",
+    "coordinates": {
+      "x": -105.5,
+      "y": 118.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 187.5,
+    "category": "CHAPLAIN",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": null,
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 666
+    }
+  },
+  {
+    "id": 97,
+    "name": "Marine-097",
+    "coordinates": {
+      "x": -104.5,
+      "y": 120
+    },
+    "creationDate": "2026-09-12",
+    "health": 180,
+    "category": null,
+    "weaponType": null,
+    "meleeWeapon": "CHAIN_AXE",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 673
+    }
+  },
+  {
+    "id": 98,
+    "name": "Marine-098",
+    "coordinates": {
+      "x": -103.5,
+      "y": 121.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 172.5,
+    "category": "SCOUT",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": "LIGHTING_CLAW",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 680
+    }
+  },
+  {
+    "id": 99,
+    "name": "Marine-099",
+    "coordinates": {
+      "x": -102.5,
+      "y": 122.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 165,
+    "category": "INCEPTOR",
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": "POWER_BLADE",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 687
+    }
+  },
+  {
+    "id": 100,
+    "name": "Marine-100",
+    "coordinates": {
+      "x": -101.5,
+      "y": 123.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 157.5,
+    "category": "TERMINATOR",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": "POWER_FIST",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 694
+    }
+  },
+  {
+    "id": 101,
+    "name": "Marine-101",
+    "coordinates": {
+      "x": -100.5,
+      "y": 125
+    },
+    "creationDate": "2026-09-12",
+    "health": 150,
+    "category": "LIBRARIAN",
+    "weaponType": null,
+    "meleeWeapon": null,
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 701
+    }
+  },
+  {
+    "id": 102,
+    "name": "Marine-102",
+    "coordinates": {
+      "x": -99.5,
+      "y": 126.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 142.5,
+    "category": "CHAPLAIN",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": "CHAIN_AXE",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 708
+    }
+  },
+  {
+    "id": 103,
+    "name": "Marine-103",
+    "coordinates": {
+      "x": -98.5,
+      "y": 127.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 135,
+    "category": null,
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": "LIGHTING_CLAW",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 715
+    }
+  },
+  {
+    "id": 104,
+    "name": "Marine-104",
+    "coordinates": {
+      "x": -97.5,
+      "y": 128.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 127.5,
+    "category": "SCOUT",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": "POWER_BLADE",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 722
+    }
+  },
+  {
+    "id": 105,
+    "name": "Marine-105",
+    "coordinates": {
+      "x": -96.5,
+      "y": 130
+    },
+    "creationDate": "2026-09-12",
+    "health": 120,
+    "category": "INCEPTOR",
+    "weaponType": null,
+    "meleeWeapon": "POWER_FIST",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 729
+    }
+  },
+  {
+    "id": 106,
+    "name": "Marine-106",
+    "coordinates": {
+      "x": -95.5,
+      "y": 131.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 112.5,
+    "category": "TERMINATOR",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": null,
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 736
+    }
+  },
+  {
+    "id": 107,
+    "name": "Marine-107",
+    "coordinates": {
+      "x": -94.5,
+      "y": 132.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 105,
+    "category": "LIBRARIAN",
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": "CHAIN_AXE",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 743
+    }
+  },
+  {
+    "id": 108,
+    "name": "Marine-108",
+    "coordinates": {
+      "x": -93.5,
+      "y": 133.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 97.5,
+    "category": "CHAPLAIN",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": "LIGHTING_CLAW",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 750
+    }
+  },
+  {
+    "id": 109,
+    "name": "Marine-109",
+    "coordinates": {
+      "x": -92.5,
+      "y": 135
+    },
+    "creationDate": "2026-09-12",
+    "health": 90,
+    "category": null,
+    "weaponType": null,
+    "meleeWeapon": "POWER_BLADE",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 757
+    }
+  },
+  {
+    "id": 110,
+    "name": "Marine-110",
+    "coordinates": {
+      "x": -91.5,
+      "y": 136.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 82.5,
+    "category": "SCOUT",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": "POWER_FIST",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 764
+    }
+  },
+  {
+    "id": 111,
+    "name": "Marine-111",
+    "coordinates": {
+      "x": -90.5,
+      "y": 137.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 75,
+    "category": "INCEPTOR",
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": null,
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 771
+    }
+  },
+  {
+    "id": 112,
+    "name": "Marine-112",
+    "coordinates": {
+      "x": -89.5,
+      "y": 138.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 67.5,
+    "category": "TERMINATOR",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": "CHAIN_AXE",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 778
+    }
+  },
+  {
+    "id": 113,
+    "name": "Marine-113",
+    "coordinates": {
+      "x": -88.5,
+      "y": 140
+    },
+    "creationDate": "2026-09-12",
+    "health": 60,
+    "category": "LIBRARIAN",
+    "weaponType": null,
+    "meleeWeapon": "LIGHTING_CLAW",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 785
+    }
+  },
+  {
+    "id": 114,
+    "name": "Marine-114",
+    "coordinates": {
+      "x": -87.5,
+      "y": 141.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 52.5,
+    "category": "CHAPLAIN",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": "POWER_BLADE",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 792
+    }
+  },
+  {
+    "id": 115,
+    "name": "Marine-115",
+    "coordinates": {
+      "x": -86.5,
+      "y": 142.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 45,
+    "category": null,
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": "POWER_FIST",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 799
+    }
+  },
+  {
+    "id": 116,
+    "name": "Marine-116",
+    "coordinates": {
+      "x": -85.5,
+      "y": 143.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 37.5,
+    "category": "SCOUT",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": null,
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 806
+    }
+  },
+  {
+    "id": 117,
+    "name": "Marine-117",
+    "coordinates": {
+      "x": -84.5,
+      "y": 145
+    },
+    "creationDate": "2026-09-12",
+    "health": 30,
+    "category": "INCEPTOR",
+    "weaponType": null,
+    "meleeWeapon": "CHAIN_AXE",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 813
+    }
+  },
+  {
+    "id": 118,
+    "name": "Marine-118",
+    "coordinates": {
+      "x": -83.5,
+      "y": 146.25
+    },
+    "creationDate": "2026-09-12",
+    "health": 22.5,
+    "category": "TERMINATOR",
+    "weaponType": "MELTAGUN",
+    "meleeWeapon": "LIGHTING_CLAW",
+    "chapter": {
+      "name": "Ultramarines",
+      "marinesCount": 820
+    }
+  },
+  {
+    "id": 119,
+    "name": "Marine-119",
+    "coordinates": {
+      "x": -82.5,
+      "y": 147.5
+    },
+    "creationDate": "2026-09-12",
+    "health": 15,
+    "category": "LIBRARIAN",
+    "weaponType": "COMBI_FLAMER",
+    "meleeWeapon": "POWER_BLADE",
+    "chapter": {
+      "name": "Raven Guard",
+      "marinesCount": 827
+    }
+  },
+  {
+    "id": 120,
+    "name": "Marine-120",
+    "coordinates": {
+      "x": -81.5,
+      "y": 148.75
+    },
+    "creationDate": "2026-09-12",
+    "health": 7.5,
+    "category": "CHAPLAIN",
+    "weaponType": "GRENADE_LAUNCHER",
+    "meleeWeapon": "POWER_FIST",
+    "chapter": {
+      "name": "Salamanders",
+      "marinesCount": 834
+    }
+  }
+]

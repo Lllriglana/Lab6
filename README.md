@@ -1,94 +1,162 @@
-# Лабораторная работа №5 — вариант 440
+# Лабораторная работа №6 — вариант 440
 
-Console application for managing a collection of SpaceMarine objects in interactive mode. Data is loaded from a JSON file at startup and can be saved back with the `save` command.
+Клиент-серверное приложение для управления `LinkedList<SpaceMarine>`. Требуется Java 17+.
+Клиент использует `DatagramSocket`/`DatagramPacket`, сервер — неблокирующий
+`DatagramChannel` и `Selector`. Обмен идёт по UDP, команды и результаты сериализуются
+через `ObjectOutputStream`/`ObjectInputStream`.
 
-## Requirements
-
-- Java SE 17+.
-- Коллекция: `java.util.LinkedList`.
-- Чтение: `InputStreamReader`; запись: `BufferedOutputStream`; формат: JSON.
-
-## Build
+## Сборка
 
 ```bash
-javac -d bin $(find src -name '*.java')
+sh build.sh
 ```
 
-## Run
+Результат: `dist/Lab6-client.jar` и `dist/Lab6-server.jar`.
+Серверный JAR включает Log4j2; передавать библиотеки отдельно при запуске не нужно.
+Сборка использует JDK (`javac`, `jar`). Зависимости Log4j2 2.25.3 находятся в `lib/`;
+если их нет, скрипт скачивает их с Maven Central с помощью `curl`.
+Документация библиотеки: https://logging.apache.org/log4j/2.x/manual/installation.html
+
+## Запуск на ноутбуке
+
+В первом терминале, в каталоге Lab6:
 
 ```bash
-java -cp bin ITMO.Lab5.Main lab5_data.json
+cp lab6_test.json lab6_data.json
+java -jar dist/Lab6-server.jar lab6_data.json 22226
 ```
 
-`lab5_data.json` is the data file path. You can use a relative path or an absolute path.
+Во втором терминале, в том же каталоге:
 
-## Commands
+```bash
+java -jar dist/Lab6-client.jar localhost 22226
+```
 
-- `help` - print command list
-- `info` - print collection info
-- `show` - list all elements
-- `add` - add a new element (interactive input)
-- `update <id>` - update element by id
-- `remove_by_id <id>` - remove element by id
-- `clear` - clear the collection
-- `save` - save to the startup file path
-- `execute_script <file>` - execute commands from a script file
-- `exit` - terminate without saving
-- `add_if_min` - add element if it is less than current minimum
-- `shuffle` - shuffle elements randomly
-- `history` - print last 11 commands
-- `count_less_than_weapon_type <weaponType>` - count elements with weaponType less than provided
-- `filter_by_weapon_type <weaponType>` - list elements with the given weaponType
-- `print_unique_category` - print unique category values
-
-Полная автономная демонстрация всех возможностей проекта:
+В консоли клиента:
 
 ```text
 execute_script scripts/full_demo.txt
 ```
 
-Сценарий намеренно содержит несколько некорректных значений, чтобы показать повторный ввод и валидацию. Для безопасности сначала используйте копию JSON-файла: команда `clear` очищает коллекцию, а `save` сохраняет демонстрационные данные.
+`lab6_test.json` содержит 120 объектов, все значения перечислений и допустимые `null`.
+Демонстрация обновляет id=1, удаляет id=2, затем очищает коллекцию и добавляет два
+объекта. При повторном запуске отсутствующий id даёт сообщение, но не нарушает
+чтение следующих команд. Скрипт намеренно содержит неверные значения полей и
+проверку рекурсии. В конце нет `save` или `exit`: управление возвращается клиенту.
+Используйте рабочую копию JSON, поскольку сервер сохраняет изменения при остановке.
 
-## Interactive Input Rules
+В консоли сервера доступны:
 
-- `id` and `creationDate` are generated automatically and are not entered by the user.
-- Enum fields accept one of the allowed constants (case-insensitive).
-- Empty line is treated as `null` for nullable fields.
-- On invalid input, the field is requested again.
-
-## JSON Format
-
-Root is an array of objects. Example:
-
-```json
-[
-	{
-		"id": 1,
-		"name": "Alpha",
-		"coordinates": {"x": 10.5, "y": 20.0},
-		"creationDate": "2026-05-24",
-		"health": 100.5,
-		"category": "SCOUT",
-		"weaponType": "MELTAGUN",
-		"meleeWeapon": "POWER_FIST",
-		"chapter": {"name": "Ultramar", "marinesCount": 1000}
-	}
-]
+```text
+info
+save
+exit
 ```
 
-## Javadoc
+`save` сохраняет коллекцию. Серверный `exit` сохраняет её и завершает сервер.
+Ctrl+C и SIGTERM также вызывают сохранение. Принудительное завершение SIGKILL
+не позволяет выполнить обработчик сохранения. EOF консоли не останавливает сервер,
+что позволяет запускать его в фоне. Ошибка чтения JSON останавливает запуск;
+повреждённый файл при этом не перезаписывается.
 
-Generate documentation into [docs/](docs/):
+Клиентский `exit` завершает только клиент. Он не сохраняет коллекцию и не останавливает сервер.
+Клиент не принимает путь к JSON: доступ к файлу есть только у сервера.
+
+## Команды клиента
+
+| Команда | Назначение |
+| --- | --- |
+| `help`, `info`, `show` | Справка, сведения, отсортированные объекты |
+| `add` | Построчный ввод и добавление объекта |
+| `update <id>` | Построчный ввод новых полей; сохраняет id и creationDate |
+| `remove_by_id <id>` | Удаление объекта |
+| `clear` | Очистка коллекции |
+| `add_if_min` | Добавление, если объект меньше минимального |
+| `shuffle` | Перемешивание внутренней коллекции; ответы всё равно сортируются |
+| `count_less_than_weapon_type <weapon>` | Подсчёт по порядку констант Weapon |
+| `filter_by_weapon_type <weapon>` | Отбор и сортировка объектов |
+| `print_unique_category` | Уникальные категории, включая null |
+| `history` | Последние 11 команд текущего клиента, без аргументов |
+| `execute_script <file>` | Чтение локального скрипта клиента |
+| `retry` | Повтор неподтверждённого запроса с тем же UUID |
+| `exit` | Завершение клиента |
+
+Оружие: `MELTAGUN`, `COMBI_FLAMER`, `GRENADE_LAUNCHER` или `null`.
+В полях объекта пустая строка задаёт `null` для необязательного перечисления.
+Порядок полей: name, coordinates.x, coordinates.y, health, category, weaponType,
+meleeWeapon, chapter.name, chapter.marinesCount. Ошибка поля вызывает повторный ввод.
+Идентификатор и дата создания отсутствуют в клиентском DTO и назначаются сервером.
+Команда `save` отсутствует в сетевом перечислении команд и недоступна клиенту.
+Пути скриптов отсчитываются от текущей папки клиента; вложенность ограничена 32,
+рекурсия проверяется по каноническому пути (включая символьные ссылки).
+
+## Запуск на Helios
+
+С ноутбука (при необходимости замените UDP-порт на свободный):
 
 ```bash
-javadoc -d docs $(find src -name '*.java')
+ssh -p 2222 s502466@se.ifmo.ru 'mkdir -p ~/Lab6/scripts'
+scp -P 2222 dist/Lab6-server.jar dist/Lab6-client.jar lab6_test.json s502466@se.ifmo.ru:~/Lab6/
+scp -P 2222 scripts/full_demo.txt scripts/inner.txt scripts/recursive.txt s502466@se.ifmo.ru:~/Lab6/scripts/
 ```
 
-Для всех классов исходного кода предусмотрены комментарии Javadoc. Откройте [docs/index.html](docs/index.html) в браузере.
+В первой SSH-сессии:
 
-## Project Structure
+```bash
+cd ~/Lab6
+cp lab6_test.json lab6_data.json
+java -jar Lab6-server.jar lab6_data.json 22226
+```
 
-- [src/](src/) - sources
-- [bin/](bin/) - compiled classes
-- [docs/](docs/) - Javadoc output
-- [lab5_data.json](lab5_data.json) - default data file
+Во второй SSH-сессии:
+
+```bash
+cd ~/Lab6
+java -jar Lab6-client.jar localhost 22226
+```
+
+Далее `execute_script scripts/full_demo.txt`. Этот вариант не требует внешнего доступа
+к UDP-порту Helios. Подключение клиента прямо с ноутбука к `se.ifmo.ru 22226` возможно
+только если сеть пропускает UDP. SSH-порт 2222 используется для SSH/SCP, а не для протокола приложения.
+Проверки в этом проекте выполнены локально; запуск на Helios требует доступного Java 17+ и свободного порта.
+
+## Протокол и ограничения
+
+`Request` содержит UUID, `CommandType`, Integer id, Weapon и `MarineData`.
+`Response` содержит статус, сообщение и реальные объекты `SpaceMarine`.
+Данные делятся на фрагменты по 1100 байт с заголовком: magic, UUID, номер и число
+фрагментов. Повторные и переставленные фрагменты собираются по индексам.
+Лимит сериализованного сообщения — 4 МиБ; превышение возвращается как ошибка.
+Десериализация ограничена по классам, глубине, числу ссылок и размеру массивов.
+
+Клиент ждёт ответ до 3 секунд и делает до 3 попыток. При отсутствии подтверждения
+останавливает скрипты, сохраняет запрос и предлагает `retry` или `exit`.
+Повторные запросы возвращают кешированный ответ, не выполняя операцию заново.
+Кеш действует в пределах одного запуска сервера: до 5 минут, 512 запросов или 32 МиБ,
+ключ — адрес клиента и UUID. После перезапуска сервера или вытеснения из кеша
+повторное выполнение возможно: долговременная гарантия exactly-once не заявляется.
+
+Сервер обрабатывает сеть, команды, консоль и очередь ответов в одном главном потоке.
+Поток JVM shutdown hook используется только для сохранения при завершении процесса;
+фоновых обработчиков клиентских запросов и асинхронных логгеров нет.
+События Log4j2 записываются в консоль и `logs/server.log` с ротацией.
+Запись JSON выполняется через временный файл с последующей заменой основного.
+
+## Структура и проверки
+
+- `common/src/main/java` — модели, DTO, сериализация, пакетный протокол.
+- `client/src/main/java` — ввод, скрипты, история и UDP-клиент.
+- `server/src/main/java` — канал, приём запросов, обработчик, очередь ответов, коллекция и JSON.
+- `tests/` — проверки через настоящие процессы Java и UDP, включая потерю ответа.
+- `output/lab6-classes.puml` — диаграмма классов.
+- `REPORT.md`, `lab6_requirements.md` — отчёт и исходное задание.
+
+```bash
+sh build.sh
+python3 tests/integration.py
+```
+
+Для тестов нужны Python 3 и разрешённые локальные UDP-сокеты. Данные тестов создаются
+во временных папках. В репозитории сохранены унаследованные `src/ITMO/Lab5`, `bin/`,
+`out/`, `docs/` и `Lab5.jar`: это материалы пятой лабораторной. Сборка Lab6 их не использует;
+для шестой запускайте только `dist/Lab6-client.jar` и `dist/Lab6-server.jar`.

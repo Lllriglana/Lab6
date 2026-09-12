@@ -1,0 +1,82 @@
+@startuml
+skinparam classAttributeIconSize 0
+package common {
+  enum CommandType
+  class Request <<Serializable>> {
+    UUID id
+    CommandType command
+    Integer elementId
+    Weapon weapon
+    MarineData element
+  }
+  class Response <<Serializable>> {
+    UUID id
+    boolean success
+    String message
+    ArrayList<SpaceMarine> elements
+  }
+  class MarineData <<Serializable>>
+  class SpaceMarine <<Serializable, Comparable>>
+  class Coordinates <<Serializable>>
+  class Chapter <<Serializable>>
+  enum Weapon
+  enum AstartesCategory
+  enum MeleeWeapon
+  class Serialization {
+    encode(Serializable): byte[]
+    decode(byte[], Class): Object
+  }
+  class Packets
+  class "Packets.Assembly" as Assembly
+  Request --> CommandType
+  Request --> MarineData
+  Response "1" *-- "*" SpaceMarine
+  MarineData --> Coordinates
+  MarineData --> Chapter
+  MarineData --> SpaceMarine : create on server
+  SpaceMarine --> Coordinates
+  SpaceMarine --> Chapter
+  SpaceMarine --> Weapon
+  SpaceMarine --> AstartesCategory
+  SpaceMarine --> MeleeWeapon
+  Packets --> Assembly
+}
+package client {
+  class ClientMain
+  class UdpClient
+  class InputManager
+  class SpaceMarineInputReader
+  ClientMain --> InputManager
+  ClientMain --> SpaceMarineInputReader
+  SpaceMarineInputReader --> InputManager
+  SpaceMarineInputReader --> MarineData
+  ClientMain --> UdpClient
+  UdpClient --> Request
+  UdpClient --> Response
+  UdpClient --> Serialization
+  UdpClient --> Packets
+}
+package server {
+  class ServerMain
+  class ConnectionModule
+  class RequestReader
+  class CommandProcessor
+  class ResponseSender
+  class CollectionManager
+  class FileManager
+  ServerMain --> ConnectionModule
+  ServerMain --> RequestReader
+  ServerMain --> CommandProcessor
+  ServerMain --> ResponseSender
+  ServerMain --> FileManager
+  RequestReader --> Packets
+  RequestReader --> Serialization
+  RequestReader --> Request
+  ResponseSender --> Packets
+  CommandProcessor --> CollectionManager
+  CommandProcessor --> Response
+  FileManager --> SpaceMarine
+  CollectionManager "1" *-- "*" SpaceMarine : LinkedList
+}
+UdpClient ..> ConnectionModule : UDP / serialized objects
+@enduml
